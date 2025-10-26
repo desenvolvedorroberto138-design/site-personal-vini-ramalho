@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://viniramalho2025.web.app/sitemap.xml
+Host: https://viniramalho2025.web.app

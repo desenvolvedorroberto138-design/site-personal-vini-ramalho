@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+     <meta charset="utf-8" />
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f97316" />
+    <meta name="description" content="Transforme sua vida com treinos personalizados e acompanhamento profissional."/>
+
+    <title>Vini Ramalho - Personal Trainer | Transformação Corporal e Saúde</title>
+    
+    <!-- Meta Tags Importantes -->
+  
+    <meta name="keywords" content="personal trainer, personal em suzano, treino, exercícios, emagrecimento, hipertrofia, saúde, Vini Ramalho">
+    <meta name="author" content="Vini Ramalho">
+    <meta name="robots" content="index, follow">
+    
+        
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn, etc.) -->
+    <meta property="og:title" content="Vinicius Personal Trainer" />
+    <meta property="og:site_name" content="Vinicius Personal Trainer" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:description" content="Transforme sua vida com treinos personalizados e acompanhamento profissional." />
+    <meta property="og:image" content="https://viniramalho2025.web.app/assets/image/hero_gallery/banner.jpg" />
+    <meta property="og:url" content="https://viniramalho2025.web.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <link rel="canonical" href="https://viniramalho2025.web.app/" />
+
+
+   
+  <!-- Favicon padrão -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<!-- PNGs corretos -->
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/image/icon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/image/icon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/image/icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/image/icon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/image/icon/android-chrome-512x512.png">
+
+<!-- Web App Manifest -->
+<link rel="manifest" href="/assets/image/icon/site.webmanifest">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Custom CSS for animations and elements Tailwind can't handle */
+        .gallery-item {
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .before-after-slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .before-after-slider img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .slider-handle {
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            background: white;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: ew-resize;
+            z-index: 10;
+        }
+        
+        .slider-handle:after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        .review-card {
+            transition: all 0.3s ease;
+        }
+        
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Animation for BMI result */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .bmi-result {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .hero-slideshow {
+          position: relative;
+          width: 100%;
+          height: 100%;
+        }
+
+        .hero-slide {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center center; /* padrão para mobile */
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        }
+
+        .hero-slide:first-child {
+          opacity: 1;
+        }
+
+        /* Carousel Styles */
+        .carousel-container {
+            width: 100%;
+            position: relative;
+        }
+        
+        .carousel-track {
+            display: flex;
+            width: 100%;
+        }
+        
+        .carousel-slide {
+            flex-shrink: 0;
+            width: 100%;
+        }
+        
+        .before-after-slider {
+            position: relative;
+            cursor: ew-resize;
+        }
+
+        /* Planos de Treinamento Styles */
+        .plan-card {
+            transition: all 0.3s ease;
+            transform: translateY(0);
+            position: relative;
+        }
+        .plan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .seal {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: #f97316;
+            color: white;
+            padding: 4px 8px;
+            font-size: 11px;
+            font-weight: bold;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transform: rotate(5deg);
+            z-index: 10;
+        }
+        .highlight-card {
+            position: relative;
+            border: 2px solid #f97316;
+        }
+        .highlight-card::before {
+            content: "MAIS POPULAR";
+            position: absolute;
+            top: 2px;
+            right: 20px;
+            background-color: #f97316;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .discount-seal {
+            position: absolute;
+            top: 70px;
+            right: -5px;
+            background-color: #f97316;
+            color: white;
+            padding: 4px 8px;
+            font-size: 11px;
+            font-weight: bold;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transform: rotate(5deg);
+            z-index: 10;
+        }
+
+        /* Contact section hidden by default */
+        #contact {
+            display: none;
+        }
+        
+        #contact.visible {
+            display: block;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        /* Desktop: ajustes de reenquadramento */
+@media (min-width: 1024px) {
+    .hero-slide {
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #000; /* fundo preto nas bordas */
+  }
+}
+
+
+
+
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header with Logo and Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="assets/image/icon/logo-vini.webp" alt="Vini Ramalho Personal Trainer" class="h-16 w-16 rounded-full mr-3">
+                <div>
+                    <h1 class="text-xl font-bold text-gray-800">Vini Ramalho</h1>
+                    <p class="text-sm text-orange-500">Personal Trainer</p>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-800" title="Abrir menu" aria-label="Abrir menu">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <!-- Navigation -->
+            <nav class="hidden md:flex justify-center flex-1 space-x-8">
+                <a href="#home" class="text-gray-800 hover:text-orange-500 transition-colors duration-300 font-medium">Home</a>
+                <a href="#about" class="text-gray-800 hover:text-orange-500 transition-colors duration-300 font-medium">Sobre</a>
+                <a href="#plan" class="text-gray-800 hover:text-orange-500 transition-colors duration-300 font-medium">Planos</a>
+                <a href="#results" class="text-gray-800 hover:text-orange-500 transition-colors duration-300 font-medium">Resultados</a>
+                <a href="#contato" class="text-gray-800 hover:text-orange-500 transition-colors duration-300 font-medium">Contato</a>
+            </nav>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black py-4 px-4 shadow-lg text-center">
+            <a href="#home" class="block py-2 text-white hover:text-orange-500">Home</a>
+            <a href="#about" class="block py-2 text-white hover:text-orange-500">Sobre</a>
+            <a href="#plan" class="block py-2 text-white hover:text-orange-500">Planos</a>
+            <a href="#results" class="block py-2 text-white hover:text-orange-500">Resultados</a>
+            <a href="#contato" class="block py-2 text-white hover:text-orange-500">Contato</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative overflow-hidden text-white py-20">
+        <div class="absolute inset-0 bg-black/50 z-10"></div>
+
+        <!-- Slideshow -->
+        <div class="hero-slideshow absolute inset-0 z-0">
+            <div class="hero-slide bg-[url('assets/image/hero_gallery/assets_photo13.jpg')]"></div>
+            <div class="hero-slide bg-[url('assets/image/hero_gallery/assets_photo15.jpg')]"></div>
+            <div class="hero-slide bg-[url('assets/image/hero_gallery/banner.jpg')]"></div>
+            <div class="hero-slide bg-[url('assets/image/hero_gallery/assets_photo1.jpg')]"></div>
+            <div class="hero-slide bg-[url('assets/image/hero_gallery/assets_photo2.jpg')]"></div>
+            <div class="hero-slide bg-[url('assets/image/hero_gallery/assets_photo3.jpg')]"></div>
+            <div class="hero-slide bg-[url('assets/image/hero_gallery/assets_photo4.jpg')]"></div>
+            <div class="hero-slide bg-[url('assets/image/hero_gallery/assets_photo5.jpg')]"></div>
+            <div class="hero-slide bg-[url('assets/image/hero_gallery/assets_photo6.jpg')]"></div>
+            <div class="hero-slide bg-[url('assets/image/hero_gallery/assets_photo7.jpg')]"></div>
+            <div class="hero-slide bg-[url('assets/image/hero_gallery/assets_photo8.jpg')]"></div>
+            <div class="hero-slide bg-[url('assets/image/hero_gallery/assets_photo9.jpg')]"></div>
+            <div class="hero-slide bg-[url('assets/image/hero_gallery/assets_photo10.jpg')]"></div>
+            <div class="hero-slide bg-[url('assets/image/hero_gallery/assets_photo11.jpg')]"></div>
+            <div class="hero-slide bg-[url('assets/image/hero_gallery/assets_photo14.jpg')]"></div>
+            <div class="hero-slide bg-[url('assets/image/hero_gallery/assets_photo16.jpg')]"></div>
+            <div class="hero-slide bg-[url('assets/image/hero_gallery/assets_photo17.jpg')]"></div>
+            <div class="hero-slide bg-[url('assets/image/hero_gallery/assets_photo18.jpg')]"></div>
+            <div class="hero-slide bg-[url('assets/image/hero_gallery/assets_photo19.jpg')]"></div>
+        </div>
+
+        <!-- Conteúdo -->
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center relative z-20">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Transforme seu corpo e sua saúde</h2>
+                <p class="text-xl mb-8">Com treinos personalizados e acompanhamento profissional do Personal Trainer Vini Ramalho.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#bmi-calculator" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full text-center transition duration-300">Agende sua aula</a>
+                    <a href="#results" class="bg-transparent hover:bg-gray-700 text-white font-bold py-3 px-6 border-2 border-white rounded-full text-center transition duration-300">Ver resultados</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Sobre Vini Ramalho</h2>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <img src="assets/image/sobre/sobre_vini_300x300.png" alt="Vini Ramalho" class="rounded-full h-64 w-64 object-cover border-4 border-orange-500 shadow-lg">
+                </div>
+                
+                <div class="md:w-2/3 md:pl-12">
+                    <p class="text-gray-700 mb-4 text-lg">
+                        Com mais de 6 anos de experiência no mercado fitness, Vini Ramalho é especialista em transformações corporais, seja para emagrecimento, hipertrofia ou condicionamento físico.
+                    </p>
+                    <p class="text-gray-700 mb-4 text-lg">
+                        Formando em Educação Física e com diversas especializações na área, Vini desenvolve treinos personalizados de acordo com os objetivos e necessidades de cada aluno.
+                    </p>
+                    <p class="text-gray-700 mb-6 text-lg">
+                        Seu método único combina técnicas avançadas de treinamento com acompanhamento nutricional para garantir resultados consistentes e saudáveis.
+                    </p>
+                    <p class="text-gray-700 mb-6 text-lg">
+                        Sou treinador no CT DarkHouse, o centro de treinamento da Integral e Darkness, o único com o selo oficial do Mr. Olympia, onde transformo dedicação em resultados reais.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-gray-100 p-4 rounded-lg text-center">
+                            <i class="fas fa-trophy text-3xl text-orange-500 mb-2"></i>
+                            <p class="font-bold">+6 anos</p>
+                            <p class="text-sm">Experiência</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg text-center">
+                            <i class="fas fa-users text-3xl text-orange-500 mb-2"></i>
+                            <p class="font-bold">+300</p>
+                            <p class="text-sm">Alunos</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg text-center">
+                            <i class="fas fa-heartbeat text-3xl text-orange-500 mb-2"></i>
+                            <p class="font-bold">100%</p>
+                            <p class="text-sm">Dedicado</p>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg text-center">
+                            <i class="fas fa-star text-3xl text-orange-500 mb-2"></i>
+                            <p class="font-bold">5.0</p>
+                            <p class="text-sm">Avaliação</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Section with Comments -->
+    <section id="results" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Resultados dos Alunos</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Before/After Slider 1 -->
+                <div class="before-after-slider rounded-lg overflow-hidden shadow-xl relative">
+                    <img src="assets/image/before_After/joana-1-1573661004336_v2_450x450.jpg" alt="Antes e Depois 1" class="w-full">
+                    <div class="slider-handle"></div>
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 text-white">
+                        <p class="font-bold">Joana Silva</p>
+                        <p class="text-sm">-15kg em 3 meses</p>
+                    </div>
+                </div>
+                
+                <!-- Comment 1 -->
+                <div class="bg-gray-100 p-6 rounded-lg flex flex-col justify-center">
+                    <div class="flex items-center mb-4">
+                        <div class="text-orange-500 text-2xl mr-2">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "O Vini mudou minha vida! Com seu método de treino e acompanhamento nutricional, consegui perder 15kg em apenas 3 meses de forma saudável. Nunca me senti tão bem!"
+                        </p>
+                    </div>
+                    <div class="flex items-center">
+                        <img src="assets/image/before_After/joana.png" alt="Joana Silva" class="rounded-full h-12 w-12 mr-3">
+                        <div>
+                            <p class="font-bold">Joana Silva</p>
+                            <p class="text-sm text-gray-600">Aluna desde 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Comment 2 -->
+                <div class="bg-gray-100 p-6 rounded-lg flex flex-col justify-center order-2 md:order-1">
+                    <div class="flex items-center mb-4">
+                        <div class="text-orange-500 text-2xl mr-2">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "Em 6 meses coloquei em prática o mesmo método que passo para meus alunos. Disciplina, constância e foco trazem resultado — e eu sou a prova disso."
+                        </p>
+                    </div>
+                    <div class="flex items-center">
+                        <img src="assets/image/before_After/vini-personal.png" alt="Vini personal" class="rounded-full h-12 w-12 mr-3">
+                        <div>
+                            <p class="font-bold">Vínicius Ramalho</p>
+                            <p class="text-sm text-gray-600">Personal trainer 2018</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Before/After Slider 2 -->
+                <div class="before-after-slider rounded-lg overflow-hidden shadow-xl relative order-1 md:order-2">
+                    <img src="assets/image/before_After/vinicius-ramalho.png" alt="Antes e Depois 2" class="w-full">
+                    <div class="slider-handle"></div>
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 text-white">
+                        <p class="font-bold">Vínicius Ramalho</p>
+                        <p class="text-sm">+8kg de massa muscular em 6 meses</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Before/After Slider 3 -->
+                <div class="before-after-slider rounded-lg overflow-hidden shadow-xl relative">
+                    <img src="assets/image/before_After/paula.jpeg" alt="Antes e Depois 3" class="w-full">
+                    <div class="slider-handle"></div>
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 text-white">
+                        <p class="font-bold">Ana Paula</p>
+                        <p class="text-sm">Definição muscular em 4 meses</p>
+                    </div>
+                </div>
+                
+                <!-- Comment 3 -->
+                <div class="bg-gray-100 p-6 rounded-lg flex flex-col justify-center">
+                    <div class="flex items-center mb-4">
+                        <div class="text-orange-500 text-2xl mr-2">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="text-gray-700 italic">
+                            "Sempre fui ativa, mas nunca consegui a definição muscular que desejava. Com o programa específico do Vini para meu biotipo, em 4 meses já estava vendo resultados incríveis. Super recomendo!"
+                        </p>
+                    </div>
+                    <div class="flex items-center">
+                        <img src="assets/image/before_After/2.png" alt="Ana Paula" class="rounded-full h-12 w-12 mr-3">
+                        <div>
+                            <p class="font-bold">Ana Paula</p>
+                            <p class="text-sm text-gray-600">Aluna desde 2019</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos de Treinamento Section -->
+    <section id="plan" class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Planos de Treinamento</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Escolha o plano que melhor se adapta aos seus objetivos com o Personal Trainer Vini Ramalho</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Plano Básico -->
+            <div class="plan-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="discount-seal">Clientes Maislaser 20% OFF</div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800">Plano Básico</h3>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">ECONÔMICO</span>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-800">R$ 80</span>
+                        <span class="text-gray-500">/ pagamento único</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">Ideal para quem busca orientação inicial ou um plano padrão</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Planilha de treino padrão</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Exercícios demonstrativos</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-times text-red-400 mr-2"></i>
+                            <span class="line-through">Acompanhamento personalizado</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-times text-red-400 mr-2"></i>
+                            <span class="line-through">Dicas de nutrição</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/5511930137185?text=Ol%C3%A1%20Vini!" class="block w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-4 rounded-lg text-center transition duration-300">
+                        Contratar
+                    </a>
+                </div>
+            </div>
+
+            <!-- Plano Intermediário (Destaque) -->
+            <div class="plan-card bg-white rounded-xl shadow-lg overflow-hidden highlight-card">
+                <div class="discount-seal">Clientes Maislaser 20% OFF</div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800">Plano Completo</h3>
+                        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full mt-2">RECOMENDADO</span>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-800">R$ 150</span>
+                        <span class="text-gray-500">/ personalizado</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">O plano perfeito para quem busca resultados consistentes</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Treino personalizado</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Dicas de nutrição básicas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Ajustes periódicos</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Suporte via WhatsApp</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/5511930137185?text=Ol%C3%A1%20Vini!" class="block w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-4 rounded-lg text-center transition duration-300">
+                        Contratar
+                    </a>
+                </div>
+            </div>
+
+            <!-- Plano Premium -->
+            <div class="plan-card bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="discount-seal">Clientes Maislaser 20% OFF</div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800">Plano Premium</h3>
+                        <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">COMPLETO</span>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-800">R$ 200</span>
+                        <span class="text-gray-500">/ atendimento completo</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">Para quem quer o máximo de resultados com acompanhamento total</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Treino personalizado</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Plano alimentar completo</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Acompanhamento diário</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Atendimento WhatsApp prioritário</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Ajustes semanais</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/5511930137185?text=Ol%C3%A1%20Vini!" class="block w-full bg-gray-800 hover:bg-black text-white font-bold py-3 px-4 rounded-lg text-center transition duration-300">
+                        Contratar
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-16 bg-orange-50 rounded-xl p-8 max-w-4xl mx-auto border-2 border-orange-300">
+            <div class="text-center">
+                <h3 class="text-3xl font-bold text-orange-800 mb-4">TREINOS PRESENCIAIS</h3>
+                <p class="text-xl text-orange-700 mb-6">Agende seu treino personalizado presencial com Vini Ramalho!</p>
+                <div class="space-y-4 mb-8">
+                    <p class="text-orange-600"><i class="fas fa-dumbbell text-orange-500 mr-2"></i> Treinos individuais ou em grupo</p>
+                    <p class="text-orange-600"><i class="fas fa-calendar-check text-orange-500 mr-2"></i> Horários flexíveis</p>
+                    <p class="text-orange-600"><i class="fas fa-map-marker-alt text-orange-500 mr-2"></i> Local a combinar</p>
+                </div>
+                <a href="https://wa.me/5511930137185?text=Ol%C3%A1%20Vini!" class="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 shadow-lg">
+                    <i class="fab fa-whatsapp mr-2 text-xl"></i>
+                    AGENDE SEU TREINO
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BMI Calculator Section -->
+    <section id="bmi-calculator" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Calculadora de IMC</h2>
+            <p class="text-center text-gray-600 mb-10">Calcule seu Índice de Massa Corporal e descubra como o Vini pode te ajudar a alcançar seus objetivos.</p>
+            
+            <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                <form id="bmi-form" class="space-y-4">
+                    <div>
+                        <label for="height" class="block text-gray-700 font-medium mb-2">Altura (cm)</label>
+                        <input type="number" id="height" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Ex: 175" required>
+                    </div>
+                    
+                    <div>
+                        <label for="weight" class="block text-gray-700 font-medium mb-2">Peso (kg)</label>
+                        <input type="number" id="weight" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Ex: 70" required>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                        Calcular IMC
+                    </button>
+                </form>
+                
+                <div id="bmi-result" class="mt-6 hidden bmi-result">
+                    <div class="bg-white p-4 rounded-lg shadow-inner">
+                        <h3 class="text-xl font-bold mb-2 text-center">Seu IMC é: <span id="bmi-value" class="text-orange-500">0.0</span></h3>
+                        <p id="bmi-category" class="text-center font-medium mb-3"></p>
+                        <div class="w-full bg-gray-200 rounded-full h-4">
+                            <div id="bmi-bar" class="bg-orange-500 h-4 rounded-full" style="width: 0%"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-gray-600 mt-1">
+                            <span>Abaixo do peso</span>
+                            <span>Normal</span>
+                            <span>Sobrepeso</span>
+                            <span>Obesidade</span>
+                        </div>
+                        <p id="bmi-message" class="mt-4 text-gray-700"></p>
+                    </div>
+                    
+                    <div class="mt-4 text-center">
+                        <button id="show-contact-btn" class="inline-block bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded-lg text-sm transition duration-300">
+                            Agende uma consulta com o Vini
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- WhatsApp Contact Form Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Fale Conosco pelo WhatsApp</h2>
+            
+            <div class="bg-gray-100 p-8 rounded-lg shadow-md">
+                <form id="whatsapp-form" class="space-y-6">
+                    <div>
+                        <label for="whatsapp-name" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
+                        <input type="text" id="whatsapp-name" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+                    </div>
+                    
+                    <div>
+                        <label for="whatsapp-phone" class="block text-gray-700 font-medium mb-2">Telefone (WhatsApp)</label>
+                        <input type="tel" id="whatsapp-phone" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+                    </div>
+                    
+                    <div>
+                        <label for="whatsapp-goal" class="block text-gray-700 font-medium mb-2">Qual seu principal objetivo?</label>
+                        <select id="whatsapp-goal" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+                            <option value="">Selecione...</option>
+                            <option value="Emagrecimento">Emagrecimento</option>
+                            <option value="Hipertrofia">Ganho de Massa Muscular</option>
+                            <option value="Condicionamento">Melhorar Condicionamento</option>
+                            <option value="Saúde">Saúde e Bem-estar</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="whatsapp-birthdate" class="block text-gray-700 font-medium mb-2">Data de Nascimento</label>
+                        <input type="date" id="whatsapp-birthdate" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+                    </div>
+                    
+                    <div>
+                        <label for="whatsapp-height" class="block text-gray-700 font-medium mb-2">Altura (cm)</label>
+                        <input type="number" id="whatsapp-height" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Ex: 170" required>
+                    </div>
+                    
+                    <div>
+                        <label for="whatsapp-weight" class="block text-gray-700 font-medium mb-2">Peso (kg)</label>
+                        <input type="number" id="whatsapp-weight" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Ex: 70" required>
+                    </div>
+                    
+                    <div>
+                        <label for="whatsapp-mealtime" class="block text-gray-700 font-medium mb-2">Horários disponíveis para refeições</label>
+                        <select id="whatsapp-mealtime" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+                            <option value="">Selecione...</option>
+                            <option value="Manhã (6h-9h)">Manhã (6h-9h)</option>
+                            <option value="Meio da manhã (9h-12h)">Meio da manhã (9h-12h)</option>
+                            <option value="Almoço (12h-14h)">Almoço (12h-14h)</option>
+                            <option value="Tarde (14h-17h)">Tarde (14h-17h)</option>
+                            <option value="Jantar (18h-21h)">Jantar (18h-21h)</option>
+                            <option value="Ceia (21h-23h)">Ceia (21h-23h)</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="whatsapp-favorite-foods" class="block text-gray-700 font-medium mb-2">Alimentos que você gosta</label>
+                        <textarea id="whatsapp-favorite-foods" rows="2" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Liste os alimentos que você mais gosta e consome frequentemente"></textarea>
+                    </div>
+
+                    <div>
+                        <label for="whatsapp-disliked-foods" class="block text-gray-700 font-medium mb-2">Alimentos que você não gosta</label>
+                        <textarea id="whatsapp-disliked-foods" rows="2" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Liste alimentos que você evita ou não consome"></textarea>
+                    </div>
+
+                    <div>
+                        <label for="whatsapp-message" class="block text-gray-700 font-medium mb-2">Alguma observação ou dúvida?</label>
+                        <textarea id="whatsapp-message" rows="3" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg transition duration-300 flex items-center justify-center">
+                        <i class="fab fa-whatsapp text-xl mr-3"></i> Enviar Mensagem pelo WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- App Download Section -->
+    <section class="py-16 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 flex justify-center">
+                    <img src="assets/image/icon/cropped-logo-mfit-horizontal-azul.png" alt="Vini Ramalho App" class="rounded-lg shadow-xl max-w-xs">
+                </div>
+                
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold mb-6">Baixe o App do Vini Ramalho</h2>
+                    <p class="text-xl mb-6">Tenha acesso exclusivo a:</p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-500 text-xl mr-3 mt-1"></i>
+                            <span>Planos de treino personalizados</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-500 text-xl mr-3 mt-1"></i>
+                            <span>Acompanhamento nutricional</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-500 text-xl mr-3 mt-1"></i>
+                            <span>Vídeos com exercícios explicativos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-500 text-xl mr-3 mt-1"></i>
+                            <span>Chat direto com o Vini</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange-500 text-xl mr-3 mt-1"></i>
+                            <span>Monitoramento de progresso</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="https://play.google.com/store/apps/details?id=app.mfit.personal&pli=1" class="bg-black hover:bg-gray-900 text-white font-bold py-3 px-6 rounded-lg flex items-center justify-center transition duration-300">
+                            <i class="fab fa-apple text-2xl mr-3"></i>
+                            <div>
+                                <div class="text-xs">Download on the</div>
+                                <div class="text-lg">App Store</div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://apps.apple.com/br/app/mfit-personal/id1283273690" class="bg-black hover:bg-gray-900 text-white font-bold py-3 px-6 rounded-lg flex items-center justify-center transition duration-300">
+                            <i class="fab fa-google-play text-2xl mr-3"></i>
+                            <div>
+                                <div class="text-xs">Get it on</div>
+                                <div class="text-lg">Google Play</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Entre em Contato</h2>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h3 class="text-xl font-bold mb-6 text-gray-800">Informações de Contato</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-orange-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Localização</h4>
+                                <p class="text-gray-600">São Paulo, SP</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-orange-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Email</h4>
+                                <p class="text-gray-600">vinissousa2822@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-orange-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Telefone</h4>
+                                <p class="text-gray-600">(11) 93013-7185</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-3 rounded-full mr-4">
+                                <i class="fab fa-whatsapp text-orange-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">WhatsApp</h4>
+                                <p class="text-gray-600">(11) 93013-7185</p>
+                                <a href="https://wa.me/5511930137185?text=Ol%C3%A1%20Vini!" class="text-orange-500 hover:text-orange-600 font-medium inline-block mt-1">
+                                    Enviar mensagem <i class="fas fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mb-6 mt-10 text-gray-800">Redes Sociais</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/vini.ramalhoo/" class="bg-gray-100 hover:bg-gray-200 text-gray-800 p-3 rounded-full transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100014838785625" class="bg-gray-100 hover:bg-gray-200 text-gray-800 p-3 rounded-full transition duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-800 p-3 rounded-full transition duration-300">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-800 p-3 rounded-full transition duration-300">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <img src="assets/image/icon/logo-vini.webp" alt="Vini Ramalho Personal Trainer" class="h-12 w-12 rounded-full mr-3">
+                        <div>
+                            <h2 class="text-xl font-bold">Vini Ramalho</h2>
+                            <p class="text-sm text-gray-400">Personal Trainer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-6 md:mb-0">
+                    <p class="text-gray-400 text-center md:text-left">
+                        Transformando vidas através do fitness e saúde
+                    </p>
+                </div>
+                
+                <div>
+                    <a href="#home" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+                        Voltar ao topo <i class="fas fa-arrow-up ml-1"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Vini Ramalho Personal Trainer. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded - initializing JavaScript functionality');
+            
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    console.log('Mobile menu toggled');
+                });
+
+                // Close mobile menu when clicking on links
+                const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                        console.log('Mobile menu closed');
+                    });
+                });
+            } else {
+                console.warn('Mobile menu elements not found');
+            }
+            
+            // BMI Calculator
+            const bmiForm = document.getElementById('bmi-form');
+            if (bmiForm) {
+                bmiForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const height = parseFloat(document.getElementById('height').value) / 100; // convert to meters
+                    const weight = parseFloat(document.getElementById('weight').value);
+                    
+                    if (height && weight) {
+                        const bmi = weight / (height * height);
+                        const roundedBMI = bmi.toFixed(1);
+                        
+                        document.getElementById('bmi-value').textContent = roundedBMI;
+                        
+                        let category = '';
+                        let message = '';
+                        let barWidth = 0;
+                        
+                        if (bmi < 18.5) {
+                            category = 'Abaixo do peso';
+                            message = 'Seu IMC indica que você está abaixo do peso ideal. O Vini pode te ajudar a ganhar massa muscular de forma saudável.';
+                            barWidth = 15;
+                        } else if (bmi >= 18.5 && bmi < 25) {
+                            category = 'Peso normal';
+                            message = 'Parabéns! Seu IMC está dentro da faixa considerada saudável. O Vini pode te ajudar a manter ou melhorar sua condição física.';
+                            barWidth = 45;
+                        } else if (bmi >= 25 && bmi < 30) {
+                            category = 'Sobrepeso';
+                            message = 'Seu IMC indica sobrepeso. Com um programa personalizado de treinos e alimentação, o Vini pode te ajudar a alcançar seu peso ideal.';
+                            barWidth = 70;
+                        } else {
+                            category = 'Obesidade';
+                            message = 'Seu IMC indica obesidade. O Vini pode desenvolver um plano seguro e eficaz para melhorar sua saúde e condicionamento físico.';
+                            barWidth = 95;
+                        }
+                        
+                        document.getElementById('bmi-category').textContent = category;
+                        document.getElementById('bmi-message').textContent = message;
+                        document.getElementById('bmi-bar').style.width = barWidth + '%';
+                        
+                        document.getElementById('bmi-result').classList.remove('hidden');
+                        
+                        // Scroll to result
+                        document.getElementById('bmi-result').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        
+                        console.log('BMI calculated:', roundedBMI, category);
+                        
+                        // Auto-reset after 5 seconds
+                        setTimeout(function() {
+                            // Reset form
+                            bmiForm.reset();
+                            
+                            // Hide result
+                            document.getElementById('bmi-result').classList.add('hidden');
+                            
+                            // Reset progress bar
+                            document.getElementById('bmi-bar').style.width = '0%';
+                            
+                            // Scroll back to form
+                            bmiForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            
+                            console.log('BMI calculator reset to initial state');
+                        }, 5000);
+                    } else {
+                        console.warn('BMI calculation failed: invalid height or weight');
+                    }
+                });
+            } else {
+                console.warn('BMI form not found');
+            }
+            
+            // Before/After Slider functionality - Simplified version
+            const sliders = document.querySelectorAll('.before-after-slider');
+            
+            if (sliders.length > 0) {
+                sliders.forEach(slider => {
+                    const handle = slider.querySelector('.slider-handle');
+                    if (handle) {
+                        let isDragging = false;
+                        
+                        handle.addEventListener('mousedown', function(e) {
+                            isDragging = true;
+                            document.addEventListener('mousemove', moveSlider);
+                            document.addEventListener('mouseup', stopDrag);
+                            console.log('Slider dragging started');
+                        });
+                        
+                        function moveSlider(e) {
+                            if (!isDragging) return;
+                            
+                            const sliderRect = slider.getBoundingClientRect();
+                            let position = e.clientX - sliderRect.left;
+                            
+                            // Constrain position within slider
+                            position = Math.max(0, Math.min(position, sliderRect.width));
+                            
+                            // Update handle position
+                            handle.style.left = position + 'px';
+                        }
+                        
+                        function stopDrag() {
+                            isDragging = false;
+                            document.removeEventListener('mousemove', moveSlider);
+                            document.removeEventListener('mouseup', stopDrag);
+                            console.log('Slider dragging stopped');
+                        }
+                        
+                        // Touch support
+                        handle.addEventListener('touchstart', function(e) {
+                            isDragging = true;
+                            document.addEventListener('touchmove', moveSliderTouch);
+                            document.addEventListener('touchend', stopDragTouch);
+                        });
+                        
+                        function moveSliderTouch(e) {
+                            if (!isDragging) return;
+                            
+                            const sliderRect = slider.getBoundingClientRect();
+                            let position = e.touches[0].clientX - sliderRect.left;
+                            
+                            // Constrain position within slider
+                            position = Math.max(0, Math.min(position, sliderRect.width));
+                            
+                            // Update handle position
+                            handle.style.left = position + 'px';
+                        }
+                        
+                        function stopDragTouch() {
+                            isDragging = false;
+                            document.removeEventListener('touchmove', moveSliderTouch);
+                            document.removeEventListener('touchend', stopDragTouch);
+                        }
+                    }
+                });
+            } else {
+                console.log('No before/after sliders found');
+            }
+            
+            // Hero Slideshow - Fixed version
+            function initHeroSlideshow() {
+                const heroSlides = document.querySelectorAll('.hero-slide');
+                if (heroSlides.length === 0) {
+                    console.warn('No hero slides found');
+                    return;
+                }
+                
+                console.log('Initializing hero slideshow with', heroSlides.length, 'slides');
+                
+                let currentHeroSlide = 0;
+                const totalSlides = heroSlides.length;
+
+                // Initialize all slides except first to opacity 0
+                for (let i = 1; i < totalSlides; i++) {
+                    heroSlides[i].style.opacity = 0;
+                }
+
+                function showNextHeroSlide() {
+                    // Hide current slide with smooth transition
+                    heroSlides[currentHeroSlide].style.transition = 'opacity 1s ease-in-out';
+                    heroSlides[currentHeroSlide].style.opacity = 0;
+                    
+                    // Move to next slide
+                    currentHeroSlide = (currentHeroSlide + 1) % totalSlides;
+                    
+                    // Show next slide with smooth transition
+                    heroSlides[currentHeroSlide].style.transition = 'opacity 1s ease-in-out';
+                    heroSlides[currentHeroSlide].style.opacity = 1;
+                    
+                    console.log('Hero slide changed to:', currentHeroSlide);
+                }
+
+                // Start slideshow
+                setInterval(showNextHeroSlide, 5000);
+                console.log('Hero slideshow started');
+            }
+
+            // Initialize hero slideshow
+            initHeroSlideshow();
+
+            // WhatsApp Form functionality - Fixed version
+            const whatsappForm = document.getElementById('whatsapp-form');
+            
+            if (whatsappForm) {
+                whatsappForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('whatsapp-name').value;
+                    const phone = document.getElementById('whatsapp-phone').value;
+                    const goal = document.getElementById('whatsapp-goal').value;
+                    const birthdate = document.getElementById('whatsapp-birthdate').value;
+                    const height = document.getElementById('whatsapp-height').value;
+                    const weight = document.getElementById('whatsapp-weight').value;
+                    const mealtime = document.getElementById('whatsapp-mealtime').value;
+                    const favoriteFoods = document.getElementById('whatsapp-favorite-foods').value;
+                    const dislikedFoods = document.getElementById('whatsapp-disliked-foods').value;
+                    const message = document.getElementById('whatsapp-message').value;
+                    
+                    // Format WhatsApp message with all collected information
+                    const whatsappMessage = `Olá Vini! Meu nome é ${name}.
+
+📋 **Informações Pessoais:**
+📞 Telefone: ${phone}
+🎂 Data de Nascimento: ${birthdate}
+📏 Altura: ${height}cm
+⚖️ Peso: ${weight}kg
+
+🎯 **Objetivo:** ${goal}
+🍽️ **Horário de Refeições:** ${mealtime}
+
+❤️ **Alimentos que gosto:** ${favoriteFoods || 'Não informado'}
+🚫 **Alimentos que não gosto:** ${dislikedFoods || 'Não informado'}
+
+💬 **Observações:** ${message || 'Nenhuma observação adicional'}
+
+Gostaria de agendar uma consulta!`;
+
+                    // Encode message for URL
+                    const encodedMessage = encodeURIComponent(whatsappMessage);
+                    
+                    // Open WhatsApp with pre-filled message
+                    window.open(`https://wa.me/5511930137185?text=Ol%C3%A1%20Vini!%20${encodedMessage}`, '_blank');
+                    
+                    // Reset form
+                    whatsappForm.reset();
+                    
+                    // Hide contact section
+                    const contactSection = document.getElementById('contact');
+                    if (contactSection) {
+                        contactSection.classList.remove('visible');
+                    }
+                    
+                    // Scroll back to top
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    
+                    // Show success message
+                    alert('O WhatsApp será aberto com sua mensagem pré-preenchida! O formulário foi limpo e você foi levado de volta ao início da página.');
+                    console.log('WhatsApp form submitted successfully - form reset and scrolled to top');
+                });
+            } else {
+                console.warn('WhatsApp form not found');
+            }
+
+            // Show contact section when BMI calculator button is clicked
+            const showContactBtn = document.getElementById('show-contact-btn');
+            if (showContactBtn) {
+                showContactBtn.addEventListener('click', function() {
+                    const contactSection = document.getElementById('contact');
+                    if (contactSection) {
+                        contactSection.classList.add('visible');
+                        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        console.log('Contact section shown and scrolled to');
+                    }
+                });
+            }
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        console.log('Scrolled to:', this.getAttribute('href'));
+                    }
+                });
+            });
+
+            console.log('All JavaScript functionality initialized successfully');
+        });
+
+        // Error handling for images
+        document.addEventListener('error', function(e) {
+            if (e.target.tagName === 'IMG') {
+                console.warn('Image failed to load:', e.target.src);
+                // You could set a placeholder image here
+                // e.target.src = 'path/to/placeholder.jpg';
+            }
+        }, true);
+    </script>
+</body>
+</html>

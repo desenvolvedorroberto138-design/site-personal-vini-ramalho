@@ -1,0 +1,570 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Proxima+Nova&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #fafafa;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Espaço menor entre imagem e texto */
+    margin: 15px auto; /* Margem reduzida */
+    text-align: center;
+}
+
+.logo-img {
+    width: 80px; /* Tamanho aumentado */
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top center; /* Destacar rosto */
+    border: 3px solid #1115f3; /* Borda azul */
+}
+
+h1 {
+    margin: 0 0 0 10px; /* Reduzir espaço à esquerda */
+    font-size: 20px; /* Tamanho menor */
+}
+
+h1 span.Vinicius {
+    font-family: 'Russo One', sans-serif;
+}
+
+h1 span.Ramalho {
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+/* Restante do arquivo CSS permanece inalterado */
+header {
+    padding-top: 60px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #1e3c5b;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #32a7a0;
+}
+
+/* Hero section */
+#hero {
+    height: 600px; /* Increased height to prevent image cutting */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('img/personal_logo.png'); /* Usando a nova imagem */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    background-size: cover; /* Ensure the image covers the section */
+    background-position: 1% 95%; /* Move the image slightly to the left and down */
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#hero button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #0d48b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#hero button:hover {
+    background-color: #45a049;
+}
+
+/* Imagem sobreposta */
+#hero .overlay-img {
+    position: absolute; /* Posiciona a imagem sobre o fundo */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição para o centro */
+    width: 80px; /* Ajuste o tamanho conforme necessário */
+    height: 80px; /* Ajuste o tamanho conforme necessário */
+}
+
+/* Seções comuns */
+section {
+    padding: 40px 20px;
+}
+
+h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/* Seção de serviços */
+#servicos {
+    background-color: #1e3c5b;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.plano {
+    background-color: #1e3c5b;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.plano:hover {
+    transform: translateY(-5px);
+}
+
+.plano h3 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.plano p {
+    margin: 10px 0;
+    color: #ddd;
+}
+
+.btn-assinar {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-assinar:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Calculadora de IMC */
+#imc {
+    background-color: #1e3c5b;
+    padding: 40px 20px;
+}
+
+#imc label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#imc input {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#imc button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#imc button:hover {
+    background-color: #45a049;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Formulário de contato */
+#contato {
+    background-color: #1e3c5b;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#contato form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#contato input,
+#contato textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#contato textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#contato button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+#contato button:hover {
+    background-color: #45a049;
+}
+
+.titulo-contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.icone-contato {
+    width: 40px;
+    height: 40px;
+}
+
+/* Estilos para o cabeçalho no footer */
+
+/* Garantir que o botão "Voltar" apareça em dispositivos menores */
+nav ul li {
+    display: inline-block; /* Mantenha o botão visível */
+}
+
+/* Ajuste para a imagem do QR Code em dispositivos menores */
+.qr-code img {
+    max-width: 50%; /* Ajusta a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+footer h3 {
+    text-align: center; /* Centraliza o texto */
+    color: #4CAF50; /* Cor do texto */
+    margin: 20px 0; /* Margem superior e inferior */
+}
+
+/* Estilos para o botão do WhatsApp */
+.whatsapp-container {
+    display: flex;
+    justify-content: flex-start; /* Alinha o botão à esquerda */
+    margin-top: 100px; /* Espaço acima do botão */
+    margin-left: -150px; /* Aumenta a margem à esquerda */
+    padding: 3px 8px; /* Reduz o padding do botão para torná-lo mais fino */
+    animation: pulse 1s infinite;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1da851; /* Cor ao passar o mouse */
+}
+
+/* Efeito de pulsar */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.whatsapp-btn {
+    text-decoration: none; /* Remove underline */
+    background-color: #25D366; /* Cor de fundo verde */
+    color: white;
+    padding: 5px 10px; /* Reduz o padding para o botão */
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;
+    font-size: 0.9em; /* Tamanho da fonte reduzido */
+    transition: background-color 0.3s, transform 0.2s; /* Transição suave */
+}
+
+.whatsapp-btn:hover {
+    background-color: #1da851; /* Cor ao passar o mouse */
+}
+
+/* Estilos para o botão de pagamento */
+.btn-pagamento {
+    background-color: #4CAF50; /* Cor do botão */
+    color: white;
+    padding: 10px 20px; /* Padding para o botão */
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;
+    font-size: 1em; /* Tamanho da fonte */
+    transition: background-color 0.3s, transform 0.2s; /* Transição suave */
+}
+
+.btn-pagamento:hover {
+    background-color: #45a049; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+/* Estilos para a centralização do conteúdo no pagamento.html */
+.pagamento-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da viewport */
+    text-align: center; /* Centraliza o texto */
+}
+
+.whatsapp-btn img {
+    width: 20px; /* Adjust icon size */
+    height: auto;
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Estilos para os ícones de redes sociais */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaço entre os ícones */
+    margin: 20px 0; /* Margem superior e inferior */
+}
+
+.social-icon {
+    width: 40px; /* Tamanho do ícone */
+    height: 40px; /* Tamanho do ícone */
+    transition: transform 0.6s; /* Transição suave para o efeito de pulsação mais lento */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Efeito de pulsação ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #hero h2 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    .metodos-pagamento {
+        flex-direction: column;
+    }
+}
+
+/* Estilos do menu hambúrguer */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilos para telas pequenas */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Oculta o menu por padrão */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajuste conforme necessário */
+        left: 0;
+        background-color: #333;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex; /* Exibe o menu quando ativo */
+    }
+
+    .menu-icon {
+        display: block; /* Exibe o ícone do menu hambúrguer */
+        position: absolute; /* Adiciona posição absoluta */
+        right: 20px; /* Alinha à direita */
+        top: 10px; /* Ajusta a posição vertical */
+    }
+}
+
+/* Estilos do WhatsApp */
+#whatsapp-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #25D366;
+    padding: 10px 15px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#whatsapp-container:hover {
+    transform: scale(1.1);
+}
+
+#whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid white;
+    padding: 5px;
+    background-color: white;
+}
+
+#whatsapp-icon {
+    position: relative;
+}
+
+#whatsapp-icon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border-radius: 50%;
+    border: 3px solid #25D366;
+    transform: translate(-50%, -50%);
+    animation: pulse 1.5s infinite;
+}
+
+.whatsapp-text {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+/* New styles for the 'sobre' section */
+#sobre {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#sobre h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#sobre p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+#sobre .personal-image {
+    width: 380px; /* Increase width for better visibility */
+    height: 380px; /* Increase height for better visibility */
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px; /* Add margin to separate from text */
+}
+
+#sobre .personal-image img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container */
+    object-position: center top; /* Center the image to focus on the face */
+}
+
+
+#sobre .personal-image img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+
+#sobre .personal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    #sobre {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sobre .personal-image {
+        width: 200px;
+        height: 200px;
+    }
+}

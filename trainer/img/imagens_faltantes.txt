@@ -1,0 +1,8 @@
+As seguintes imagens estão faltando e precisam ser adicionadas:
+- personal_trainer.jpg
+- after.jpg
+- before.jpg
+- background.jpg
+- instagram_icon.png
+- facebook_icon.png
+- twitter_icon.png

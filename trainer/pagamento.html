@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="site de personal trainer">
+    <title>Pagamento - Personal Trainer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Finalizar Assinatura</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Voltar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pagamento-container">
+        <h2 id="plano-titulo"></h2>
+        <p id="plano-valor"></p>
+
+        <div class="opcao-pagamento" onclick="selecionarPagamento('pix')">
+            <h3>PIX</h3>
+            <p>Coloque o valor do seu plano.</p>
+        </div>
+
+        <div id="form-pix" class="form-pagamento">
+            <h3>Pagamento via PIX</h3>
+            <div class="qr-code">
+                <img src="img/qrcode.png" alt="QR Code PIX">
+            </div>
+            <p>Chave PIX: 59106489000123 </p>
+            <button class="btn-pagamento" onclick="copiarChavePix()">Copiar Chave PIX</button>
+            <br><br>
+            <button class="btn-pagamento" onclick="confirmarPagamento()">Após pagar, clique aqui</button>
+        </div>
+
+        <p id="status-pagamento"></p>
+    </main>
+
+    <script>
+        function confirmarPagamento() {
+            window.open("https://client.mfitpersonal.com.br/out/signup-link/MjI3MTE5", "_blank");
+        }
+
+        // Obter parâmetros da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const plano = urlParams.get('plano');
+        const valor = urlParams.get('valor');
+
+        // Atualizar informações do plano
+        document.getElementById('plano-titulo').textContent = `Plano ${plano}`;
+        document.getElementById('plano-valor').textContent = `Valor: R$${valor}/mês`;
+
+        function selecionarPagamento(metodo) {
+            document.getElementById('form-pix').style.display = metodo === 'pix' ? 'block' : 'none';
+        }
+
+        function copiarChavePix() {
+            navigator.clipboard.writeText('59106489000123')
+                .then(() => {
+                    document.getElementById('status-pagamento').textContent = 'Chave PIX copiada!';
+                    document.getElementById('status-pagamento').style.color = 'green';
+                })
+                .catch(() => {
+                    document.getElementById('status-pagamento').textContent = 'Erro ao copiar chave PIX';
+                    document.getElementById('status-pagamento').style.color = 'red';
+                });
+        }
+
+        // Inicializar mostrando o formulário de PIX
+        selecionarPagamento('pix');
+    </script>
+</body>
+</html>
